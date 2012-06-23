@@ -17,7 +17,7 @@
 
 
 ########################## Configuration ##################################
-DEBUG=false
+DEBUG=true
 PSEP=::		# seperator in plist-file
 VPPATH=~/.vimpro
 UPLOADFILE=$1
@@ -77,8 +77,13 @@ if [ "$UMODE" = "ftp" ]; then
 	NCARGS="-u $USER -p $PASS $HOST $RPATH/$LOCALPATH $LOCALFILE"
 	debug "ncftp arguments: '$NCARGS'"
 	ncftpput $NCARGS
-else
-	die "scp mode not implemented yet"
 fi
+
+if [ "$UMODE" = "scp" ]; then 
+    SCPARGS="$LOCALPATH/$LOCALFILE $USER@$HOST:$RPATH/"
+    debug "scp arguments: '$SCPARGS'"
+    scp $SCPARGS
+fi
+
 
 #EOF

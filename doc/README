@@ -15,4 +15,8 @@ INSTALLATION
 - modify the project-config (see testprj.conf)
 - open a file within your configured project and press F5 in command mode
 
-
+LIMITATIONS
+===
+Copying Files in scp mode relies on the scp comand that comes with the standard ssh packages
+Due to the fact that scp does not accept a password as an argument scp mode only works with 
+ssh-keys in place
