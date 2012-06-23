@@ -17,7 +17,7 @@
 
 
 ########################## Configuration ##################################
-DEBUG=true
+DEBUG=false
 PSEP=::		# seperator in plist-file
 VPPATH=~/.vimpro
 UPLOADFILE=$1
