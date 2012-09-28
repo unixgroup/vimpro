@@ -80,7 +80,7 @@ if [ "$UMODE" = "ftp" ]; then
 fi
 
 if [ "$UMODE" = "scp" ]; then 
-    SCPARGS="$LOCALPATH/$LOCALFILE $USER@$HOST:$RPATH/"
+    SCPARGS="$LOCALFILE $USER@$HOST:$RPATH/$LOCALPATH"
     debug "scp arguments: '$SCPARGS'"
     scp $SCPARGS
 fi
