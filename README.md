@@ -8,7 +8,8 @@ bash, ncftp (with ncftpput) and ssh for sftp file transfers
 
 -   Put vimup.sh in $PATH
 -   create .vimpro in $HOME and put plist and the sample config in in (see doc/samples/)
--   modify .vimrc in $HOME and add this line which binds upload on F5: map <F5> :w<CR>:silent<CR>:!vimup.sh "$(pwd)/%"<CR>
+-   modify .vimrc in $HOME and add this line which binds upload on F5: 
+    map <F5> :w<CR>:silent<CR>:!vimup.sh "$(pwd)/%"<CR>
 -    modify the project-config (see testprj.conf)
 -    open a file within your configured project and press F5 in command mode
 
